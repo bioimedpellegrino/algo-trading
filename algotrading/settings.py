@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'coinbase',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Coinbase api
+COINBASE_API_KEY = 'YOUR_API_KEY'
+COINBASE_API_SECRET = 'YOUR_API_SECRET'
+COINBASE_API_PASSPHRASE = 'YOUR_API_PASSPHRASE'
