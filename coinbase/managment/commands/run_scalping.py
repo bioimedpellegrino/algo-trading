@@ -6,11 +6,27 @@ import ccxt
 import time
 
 
+
+# PRODUCTION
 exchange = ccxt.coinbasepro({
     'apiKey': settings.COINBASE_API_KEY,
     'secret': settings.COINBASE_API_SECRET,
     'password': settings.COINBASE_API_PASSPHRASE,
     'enableRateLimit': True,
+})
+
+#SANDBOX 
+exchange = ccxt.coinbasepro({
+    "apiKey": "bac3e369fcb59289a9282af99b9c8524",
+    "secret": "x7ExpiRjvz3c1/ZcPX8dx4GWXySin2LMCRcWuwbvMOlEYOc7otsaL6/GCEs3WuO74JYDcoxywsoUjb9sM9AJIA==",
+    "password": "4ihprsr6na",
+    "enableRateLimit": True,
+    'urls': {
+        'api': {
+            'public': 'https://api-public.sandbox.pro.coinbase.com',
+            'private': 'https://api-public.sandbox.pro.coinbase.com',
+        },
+    },
 })
 
 class Command(BaseCommand):
